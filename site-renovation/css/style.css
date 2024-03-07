@@ -1,0 +1,1012 @@
+@charset "utf-8";
+
+/* フォント */
+body{
+font-family: 'Noto Sans JP', sans-serif;
+}
+h1,h2,#section2 h4,#section4 .Q1::before,.Q2::before,.A1::before,.A2::before,#submity,footer p{
+font-family: 'Noto Serif JP', serif;
+}
+
+/* ヘッダー作成 */
+.headertop{
+  display: block;
+  position: relative;
+  width:100%;
+  height: 52px;
+  background-color: white;
+  z-index: 1;
+}
+
+header div img{
+  display:block;
+  max-width:240px;
+  height:20px;
+  position: relative;
+  left:12px;
+  top:16px;
+}
+
+/* 画像１の大きさ */
+.image1{
+  width:100%;
+  background-size: cover;
+  height: auto;
+}
+
+.gMenu {
+
+  position: fixed;
+  margin-top: -45px;
+  width: 100%;
+  z-index: 99;
+
+}
+/* input要素 checkboxを非表示 */
+.gMenu .menu-btn {
+  display: none;
+}
+/* label要素 アイコン表示 */
+.gMenu .menu-icon {
+  position: absolute;
+  right: 20px;
+  top: 46px;
+  padding-top: 5px;
+  height: 12px;
+  cursor: pointer;
+}
+/* span要素 3本線の中央の線を作成 */
+
+.gMenu .menu-icon .navicon {
+  /* インラインをブロックに変更 */
+  display: block;
+  /* 線の長さ */
+  width: 31px;
+  /* 線の太さ */
+  height: 2px;
+  /* 線の色 */
+  background: #B71B26;
+  /* ::beforeと::afterの基準要素 */
+  position: relative;
+}
+
+/* 三本線の上と下に配置する */
+.gMenu .menu-icon .navicon::before,
+.gMenu .menu-icon .navicon::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #B71B26;
+  /* 基準要素のspanに対して絶対配置 */
+  position: absolute;
+  /* 三本戦からバツ印へ切り替える際のアニメーション */
+  transition: all 0.4s ease-out;
+}
+
+.gMenu .menu-icon .navicon::before {
+  top: 10px;
+}
+
+
+/* 三本線の上の線 */
+.gMenu .menu-icon .navicon::after {
+  top: -10px;
+}
+
+/* ul要素　メニュー */
+.gMenu .menu {
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  /* 非表示 */
+  max-height: 0;
+  overflow: hidden;
+  /* 非表示のアニメーション */
+  transition: max-height 0.6s ease-out;
+}
+
+/* 1つ目のli要素 */
+.gMenu .menu li:first-of-type {
+  padding-top: 80px;
+}
+
+/* a要素 */
+.gMenu .menu li a {
+  display: block;
+  padding: 24px 20px;
+  text-transform: uppercase;
+}
+
+/* a要素　マウスオーバー */
+.gMenu .menu li a:hover {
+  background: #f4f4f4;
+  z-index:-1;
+
+}
+
+
+/* チェック時の挙動 */
+
+/* 非表示にしていたul.menuを表示 */
+.gMenu .menu-btn:checked~.menu {
+  max-height: 532px;
+  /* 元は０px */
+  /* 表示する際のアニメーション */
+  transition: max-height 1.0s;
+}
+
+/* 回転させる */
+.gMenu .menu-btn:checked~.menu-icon{
+  transition: all 1.2s;
+  transform: rotateY(-720deg);
+}
+/* 三本線の中央の線を透明で非表示 */
+.gMenu .menu-btn:checked~.menu-icon .navicon {
+  transition:all 0.2s;
+  background:transparent;
+  /* 元は#333 */
+}
+
+/* 三本線の上下の線を回転させてバツ印を作成 */
+
+.gMenu .menu-btn:checked~.menu-icon .navicon::before {
+  transform: translateY(-6px) rotate(135deg);
+  
+  
+  /* transform: rotate(-45deg);*/
+  top: 3px;
+  
+}
+.gMenu .menu-btn:checked~.menu-icon .navicon::after {
+  transform: translateY(6px) rotate(-135deg);
+  
+  /* transform: rotate(45deg);*/
+  top: -7.8px; 
+}
+
+.gMenu_1 {
+  display: none;
+}
+#section1,#section2,#section4{
+  margin-left: 12px;
+  margin-right: 12px;
+}
+/* #section1,#section2{max-width:375px;} */
+/* h2 h3見出し文字の大きさ */
+h2.Midashi {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+h3{
+  text-align: center;
+  position: relative;
+  font-size: 12px;
+}
+
+
+
+#section4 h2{
+  margin-top:80px;
+}
+/* h2の余白 */
+#section1 h2{
+  margin-top:48px;
+  line-height: 28px;
+}
+
+#section2 h2{
+  margin-top:80px;
+}
+#section2{
+  padding-bottom:32px;
+}
+/* h3の余白 */
+.h3kotei{
+  display: block;
+  text-align: center;
+}
+h3{
+  display: inline;
+  max-width: 137px;
+  margin-top:8px;
+  letter-spacing: 0.1em;
+  
+}
+/* h3 の二つ色違い */
+#bow3{
+  color:#B71B26;
+}
+#bow4{
+  color:#223E69;
+}
+
+/* h4の上の余白　文字調整 */
+ h4{
+  margin-top:28px;
+  font-size:20px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+#section2 h4{
+margin-top:8px;
+font-weight: 400;
+font-size: 20px;
+}
+/* h3の横の棒 */
+
+h3::before,h3::after{
+  position:absolute; 
+  content:"";
+  width:60px;
+  height:1px;
+  background-color: black;
+}
+#bow1::before{
+top:9px;
+left: 70px;
+}
+#bow1::after{
+top:9px;
+right:70px;
+}
+#bow2::before{
+  top:9px;
+  left: 58px;
+  }
+  #bow2::after{
+  top:9px;
+  right:58px;
+}
+#bow3::before{
+  top:9px;
+  left: 70px;
+  background-color: #B71B26;
+  }
+  #bow3::after{
+  top:9px;
+  right:70px;
+  background-color: #B71B26;
+}
+#bow4::before{
+  top:9px;
+  left: 95px;
+  background-color: #223E69;
+  }
+  #bow4::after{
+  top:9px;
+  right:95px;
+  background-color: #223E69;
+}
+#bow5::before{
+  top:9px;
+  left: 83px;
+  }
+  #bow5::after{
+  top:9px;
+  right:83px;
+}
+
+/* section2 read文の調整 */
+#section2 p{
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  margin-top:8px;
+}
+.read1{
+  margin-top:16px;
+  letter-spacing: 0.1em;
+}
+/* section2の画像調整 */
+#section2 img{
+  max-width:100%;
+  display:block;
+  margin:0 auto;
+  margin-top:24px;
+}
+/* moreたち＋→ */
+div.moreright{
+  display: block;
+  text-align: right;
+  margin:8px 8px 48px 0;
+}
+.more{
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  position:relative;
+}
+.more:hover{
+  letter-spacing: 0.15em;
+}
+.more::before{
+  position:absolute;
+  content:"";
+  width:4px;
+  height:4px;
+  border: 4px solid #fff;
+  border-left:5px solid #000;
+  right: -12px;
+  top:8px;
+}
+/* section3のリスト, */
+
+#section3{
+  width:100%;
+  background-color: rgba(34,62,105,0.15)  ;
+  padding-top:16px;
+}
+#Midashi3{
+  margin:0;
+}
+#section3 ol{
+  display: block;
+  margin-top:24px;
+  text-align: center;
+  padding: 16px;
+}
+#section3 li{
+  color: #fff;
+  letter-spacing: 0.1em;
+  font-size: 16px;
+  display: block;
+  margin:0 auto;
+  margin-bottom:32px;
+  max-width: 300px;
+  background-color: #333;
+  border-radius:30px;
+  padding:8px 0;
+  position: relative;
+  z-index: 99;
+}
+
+/* section3の赤い→ */
+#section3 .li1::after{
+  position:absolute;
+  content:"";
+  width:1px;
+  height:1px;
+  border:16px solid rgba(34,62,105,0.0);
+  border-top: 15px solid rgba(183,27,38,0.6);
+  right:45%;
+  top:44px;
+}
+#section3 .li2::after{
+  position:absolute;
+  content:"";
+  width:1px;
+  height:1px;
+  border:16px solid rgba(34,62,105,0.0);
+  border-top: 15px solid rgba(183,27,38,0.7);
+  right:45%;
+  top:44px;
+}
+#section3 .li3::after{
+  position:absolute;
+  content:"";
+  width:1px;
+  height:1px;
+  border:16px solid rgba(34,62,105,0.0);
+  border-top: 15px solid rgba(183,27,38,0.8);
+  right:45%;
+  top:44px;
+}
+#section3 .li4::after{
+  position:absolute;
+  content:"";
+  width:1px;
+  height:1px;
+  border:16px solid rgba(34,62,105,0.0);
+  border-top: 15px solid rgba(183,27,38,0.9);
+  right:45%;
+  top:44px;
+}
+#section3 .li5::after{
+  position:absolute;
+  content:"";
+  width:1px;
+  height:1px;
+  border:16px solid rgba(34,62,105,0.0);
+  border-top: 15px solid rgb(183,27,38);
+  right:45%;
+  top:44px;
+}
+#section3 .li6::after{
+  position:relative;
+  content:"";
+}
+
+/* section4のQ,A文章の調整 */
+#section4 p{
+  display: block;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+.Q1,.Q2{
+  margin-top: 24px;
+  margin-left: 44px;
+  position: relative;
+}
+.Q2{
+  margin-top:30px;
+}
+.A1,.A2{
+  margin:22px 0 0px 44px;
+  position: relative;
+}
+.A2{margin-top:16px;
+margin-bottom:80px;}
+
+/* Q,Aの丸作成疑似要素 */
+.Q1::before,.Q2::before{
+  position: absolute;
+  content: "Q.";
+  color:#fff;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #333333;
+  text-align: center;
+  width: 36px;
+  height:36px;
+  line-height:32px;
+  border-radius: 50%; 
+  top:-5px;
+  left:-44px;
+}
+.A1::before,.A2::before{
+  position:absolute;
+  content:"A.";
+  color:#fff;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #871B26;
+  text-align: center;
+  width: 36px;
+  height:36px;
+  line-height:32px;
+  border-radius: 50%; 
+  left:-44px;
+}
+
+/* section5のフォーム タイトルと必須 */
+p.topform{
+  text-align: center;
+  margin-top: 24px ;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+.Hissu{
+  display: inline-block;
+  color: #fff;
+  font-size:10px;
+  width: 40px;
+  height: 18px;
+  background-color: #B71B26;
+  margin-left: 4px;
+  border-radius: 8px;
+  line-height:18px;
+  vertical-align:3px;
+}
+
+/* テキストエリアの調整 */
+#section5{
+  background-color: rgba(34,62,105,0.15);
+  padding:16px;
+}
+form{
+  margin:0 auto;
+}
+input[type="text"] ,
+input[type="email"],
+textarea{
+  height:32px;
+  margin-top:8px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  width:100%;
+}
+textarea{
+  height:120px;
+}
+input[type="number"]{
+  height:32px;
+  margin-top:8px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  width:35%
+}
+#posuto{
+  font-size:14px;
+  vertical-align: -4px;
+  margin-right:4px;
+  color:#333; 
+}
+#toumeizyuusyo{
+ height: 1px;;
+ margin: 0 12px 0 0;
+ opacity: 0;
+}
+[type="number"]::-webkit-outer-spin-button, 
+[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+} 
+[type="number"]{
+  -moz-appearance:textfield;
+}
+/* ラジオボックス調整 */
+.formposition{
+  margin-top:24px;
+  text-align: center;
+}
+.formposition label{
+  margin:0 20px;
+}
+.nameform{
+  text-align:center;
+}
+/* 送信ボタン */
+#submity{
+  margin:24px auto 0;
+  line-height: 42px;
+  color: #fff;
+  background-color: #333;
+  width:200px;
+  height: 48px;
+  position:relative;
+}
+#submity input{
+  margin-left:16.5px;
+  letter-spacing: 0.1em;  
+  font-size: 16px; 
+}
+/* ボタンの矢印 */
+#submity::after{
+  position: absolute;
+  content:"";
+  width: 9px;
+  height:9px;
+  border: 6px solid #333 ;
+  border-left:6px solid #fff;
+  top:18px;
+  right:10px;
+}
+
+/* footer作成 */
+/* フッター矢印 */
+footer{
+  position: relative;
+}
+.tophe{
+  text-align: center;
+  padding-top:17px;
+  position:absolute;
+  width:46px;
+  height:46px;
+  background-color: #333;
+  right:35px;
+  bottom:45px;
+}
+
+.alow{
+  display:inline-block;
+  content:"";
+  width:22px;
+  height:22px;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  rotate:45deg;
+}
+
+/* フッター帯 */
+footer p{
+  color: #fff;
+  background-color: #333;
+  height:45px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 40px;
+  margin-top:180px;
+}
+
+
+/* ここからPC用!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media screen and (min-width:767px){
+
+/* section1のread文可変に  */
+#section1{
+  max-width:1140px;
+}
+
+/* section2の余白 */
+#section2 .Midashi{
+  margin-top:160px;
+}
+#section2 .section2s{
+  margin-top:24px;
+}
+/* section3の余白 */
+
+#section3{
+  padding-top:48px;
+}
+/* ナビゲーションfixed消す */
+.gMenu{
+  position: relative;
+}
+/* ナビゲーション横並びに */
+.gMenu .menu {
+  overflow:visible;
+  }
+.gMenu .menu li:first-of-type {
+  padding-top: 0;
+}
+nav ul{
+  display: flex;
+  justify-content: right;
+  
+}
+nav li{
+  padding:0;
+  flex-basis: 10%;
+}
+header div img{
+  display:block;
+  max-width:32%;
+  height:32.85px;
+  top:27px;
+}
+/* ナビコン消し消し */
+.gMenu .menu-icon .navicon {
+  background: #B71B26;
+  display: inline;
+}
+/* ヘッダー調整 */
+.headertop{
+  height: 81px;
+}
+.gMenu .menu li a {
+padding:44px 0px 49px 0px;
+font-size:1.2vw;
+max-height:90px;
+}
+.gMenu .menu li a:last-of-type{
+padding-right:4px;
+
+}
+/* rogo調整 */
+h1 img {
+  display: block;
+  width:400px;
+  height: 32.85px;
+  font-size: 0;
+  position: absolute;
+  left: 24px;
+  top:25px;
+}
+/* トップ画像挿入 */
+.image1{
+  width:0%;
+  position: absolute;
+}
+.pc-img{
+  background-image:url(../images/hero\ 2.jpg) ;
+  /* background-repeat: cover; */
+  background-size: cover;
+  width:100%;
+  text-align: center;
+  /* height:545px; */
+  height:545px;
+  margin-bottom: 160px;
+}
+/* sectionのサイド余白 */
+#section1,#section2,#section4{
+  width:75%;
+  margin: 0 auto;
+}
+/* h2の余白調整 */
+h2{
+  margin-top:0;
+}
+/* section2画像大きさ位置 横並び */
+
+.section2s img{
+    width:100%;
+  /* height:210px; */
+  margin-top:24px;
+}
+.section2s{
+  width:30%;
+}
+#section2 .flexman{
+  display: flex;
+  justify-content: space-around;
+  max-width: 1140px;
+  margin:0 auto;
+}
+/* read文調整 */
+p.read2{
+  display: inline-block;
+  margin:0;
+  
+}
+/* フロー横並び*/
+  #section3 ol{
+    display: flex;
+    /* width:67%; */
+    max-width:910px;
+    /* margin-left:17%; */
+    margin:auto;
+    justify-content: space-around;
+    margin-top:24px;
+    padding: 0px;
+  }
+  #section3 li{
+    width:60px;
+    height:280px;
+    writing-mode: vertical-rl;
+    color: #fff;
+    letter-spacing: 0.1em;
+    font-size: 28px;
+    margin:0;
+    padding: 0;
+    background-color:#333;
+    border-radius:30px;
+    padding-right: 15px;
+    margin-bottom:48px;
+    margin-top:24px;
+  }
+  
+  /* section3の赤い→ */
+#section3 .li1::after{
+  width:60px;
+  height:60px;
+  border:30px solid rgba(34,62,105,0.0);
+  border-left: 30px solid rgba(183,27,38,0.6);
+  right:-90px;
+  top:40%;
+}
+#section3 .li2::after{
+  position:absolute;
+  content:"";
+  width:1px;
+  height:1px;
+  border:30px solid rgba(34,62,105,0.0);
+  border-left: 30px solid rgba(183,27,38,0.7);
+  right:-90px;
+  top:40%;
+}
+#section3 .li3::after{
+  position:absolute;
+  content:"";
+  width:1px;
+  height:1px;
+  border:30px solid rgba(34,62,105,0.0);
+  border-left: 30px solid rgba(183,27,38,0.8);
+  right:-90px;
+  top:40%;
+}
+#section3 .li4::after{
+  position:absolute;
+  content:"";
+  width:1px;
+  height:1px;
+  border:30px solid rgba(34,62,105,0.0);
+  border-left: 30px solid rgba(183,27,38,0.9);
+  right:-90px;
+  top:40%;
+}
+#section3 .li5::after{
+  position:absolute;
+  content:"";
+  width:1px;
+  height:1px;
+  border:30px solid rgba(34,62,105,0.0);
+  border-left: 30px solid rgba(183,27,38,1);
+  right:-90px;
+  top:40%;
+}
+/* section4余白など調整します */
+.QA{
+  max-width:1140px;
+  margin: auto;
+}
+
+.Q1{
+  margin-top:48px;
+}
+.Q2{
+  margin-top:48px;
+}
+.A2{
+  margin-bottom:160px;
+}
+/* section5の余白 */
+section#section5{
+  padding:48px 16px 48px 16px;
+}
+
+/* section5フォーム全体調整 */
+
+#section5 form{
+  max-width:1020px;
+  height:1028px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.formflex{
+  display: flex;
+  /* line-height: auto; */
+}
+p.topform{
+  flex-basis:33%;
+  text-align:right;
+}
+.radio{
+  vertical-align: 2px;
+}
+ #radioo{
+  margin-left:0;
+  font-size: 20px;
+  bottom: 1px;
+  position: relative;
+}
+#radioo2{
+  font-size: 20px;
+  bottom: 1px;
+  position: relative;
+}
+/* テキストボックス調整 */
+input[type="text"] ,
+input[type="number"]{
+  margin:0;
+  margin-top:24px;
+  width:33%;
+  height:52px;
+}
+
+.formflex label{
+  flex-basis: 65%;
+}
+#textwidth{
+  width:100%
+}
+
+textarea,
+input[type="email"]
+{
+  height:52px;
+  flex-basis: 65%;
+}
+textarea{
+  height:208px;
+  margin-bottom:24px;
+}
+ .zyuusyo{
+  display: block;
+}
+/* ホバー時 */
+
+input[type="text"]:hover{
+  background-color:rgb(228, 228, 228)  
+}
+input[type="number"]:hover{
+  background-color: rgb(228, 228, 228)
+}
+input[type="email"]:hover{
+  background-color: rgb(228, 228, 228)
+}
+textarea:hover{
+  background-color: rgb(228, 228, 228)
+}
+/* フォーム余白、フォント調整しちゃう */
+/* margin全部０にする */
+p.formposition{
+  margin:0
+}
+p.topform{
+  margin:0
+}
+form input{
+  margin:0
+}
+div.formflex{
+  margin:0;
+}
+/* フォーム余白調整 */
+#Syubetu{
+  margin-top:48px;
+  padding-top:48px;
+}
+#Namae{
+  margin-top:24px;
+}
+p.topform{
+  margin-top:24px;
+} 
+input[type="email"],
+textarea{
+  margin-top:24px ;
+}
+p.topform{
+  margin-right:12px;
+}
+.Hissu{
+  text-align: center;
+}
+span#posuto{
+  display: inline;
+  font-size: 20px;
+  margin-right:2px;
+  line-height: 67px;;
+}
+
+/* 送信ボタン調整 */
+#submity{
+  width:300px;
+  height: 68px;
+  text-align: center;
+  border: none;
+}
+#submity:hover{
+  background-color: rgb(64, 64, 97);
+}
+#submity input{
+  margin:0 4px 0 0;
+  line-height: 65px;
+  padding:0px 70px;
+}
+/* ボタン→ */
+#submity::after{
+  position: absolute;
+  content:"";
+  width: 9px;
+  height:12px;
+  border: 7px solid #333 ;
+  border-left:6px solid #fff;
+  top:26px;
+  right:55px;
+}
+#submity:hover::after{
+  border: 7px solid rgb(64, 64, 97) ;
+  border-left:6px solid #fff;
+}
+  /* フッター◆調整 */
+  .tophe{
+    text-align: center;
+    padding-top:23px;
+    width:60px;
+    height:60px;
+  }
+  .alow{
+    width:28px;
+    height:28px;
+  }
+  .alow:hover{
+    transform: scale(1.1);
+
+  }
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
