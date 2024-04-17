@@ -1,0 +1,191 @@
+@charset "UTF-8";
+
+
+body {
+  font-family: 'Noto Sans JP';
+}
+
+img {
+  width: 16vw;
+  height: 13.333vw;
+  max-width: 100px;
+  max-height: 83.333px;
+  margin-top: 3.2vw;
+  margin-left: 3.2vw;
+}
+
+.purchase_h1 {
+  text-align: center;
+  font-size: clamp(20px, 4vw, 32px);
+  color: #7f5539;
+  margin-top: 60px;
+  margin-bottom: 72px;
+}
+
+.purchase_h2 {
+  text-align: center;
+  font-size: clamp(12px, 2vw, 20px);
+  font-weight: 400;
+  color: #7f5539;
+  padding-bottom: 20px;
+  margin-left: 5.333vw;
+  margin-right: 5.333vw;
+  margin-bottom: 4px;
+}
+
+.item_box,
+.total_box,
+.address_box,
+.cash_box {
+  font-size: clamp(12px, 2vw, 20px);
+  padding: 4px 6.4vw;
+  margin-bottom: 20px;
+  border-top: 1px solid #e8c2ca;
+  border-bottom: 1px solid #e8c2ca;
+  margin-left: 5.333vw;
+  margin-right: 5.333vw;
+}
+
+.total_box,
+.item_name,
+.item_count,
+.item_total,
+.customer_name,
+.customer_address,
+.payment_method,
+.card_type,
+.card_number {
+  display: flex;
+  align-items: center;
+}
+
+
+.divbox_1 {
+  flex-basis: 17.125vw;
+  color: #7f5539;
+}
+
+
+
+.divbox_2 {
+  flex-basis: 82.875vw;
+  border-left: 2px solid #e8c2ca;
+  padding-left: 3.2vw;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.item_name p,
+.item_count p,
+.item_total p,
+.customer_name p,
+.customer_address p,
+.payment_method p,
+.card_type p,
+.card_number p {
+  margin: 4px 0;
+}
+
+.total_box .total_price1,
+.total_box .total_price2 {
+  font-weight: bold;
+}
+
+.complete_box_btn {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 80px;
+
+}
+
+.complete_btn {
+  width: 42.666vw;
+  font-family: 'Noto Sans JP';
+  font-size: clamp(12px, 2vw, 20px);
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 5.07vw;
+  background: #7f5539;
+  color: #ffffff;
+  transition: .3s;
+  border: 1px solid #7f5539;
+}
+
+.complete_btn:hover {
+  color: #7F5539;
+  background: #fff;
+}
+
+
+.purchaseP {
+  text-align: center;
+  font-size: clamp(12px, 2vw, 20px);
+  color: #bf0000;
+  line-height: 1.5em;
+  padding: 16px 6.4vw 20px 6.4vw;
+  margin-bottom: 20px;
+  border-top: 1px solid #bf0000;
+  border-bottom: 1px solid #bf0000;
+  margin-left: 5.333vw;
+  margin-right: 5.333vw;
+}
+
+.card_registration_box {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+.card_registration {
+  width: 42.666vw;
+  font-family: 'Noto Sans JP';
+  font-size: clamp(12px, 2vw, 20px);
+  text-align: center;
+  cursor: pointer;
+  padding: 12px 5.07vw;
+  background: #7f5539;
+  color: #ffffff;
+  transition: .3s;
+  border: 1px solid #7f5539;
+}
+
+.card_registration:hover {
+  color: #7F5539;
+  background: #fff;
+}
+
+
+.purch_h2 {
+  /* 見出しの調整・変更 */
+  margin-top: 40px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: clamp(20px, 5vw, 36px);
+  color: #7F5539;
+}
+
+
+.purch_border {
+  margin: auto;
+  border: 2px solid #E8C2CA;
+  width: 89%;
+  margin-top: 40px;
+  margin-bottom: 100px;
+}
+
+.purch_p {
+  text-align: center;
+  padding-top: 40px;
+  font-size: clamp(16px, 3vw, 20px);
+}
+
+.purch_suba {
+  display: block;
+  text-align: right;
+  margin-top: 24px;
+  margin-bottom: 30px;
+  text-decoration: underline;
+  padding-right: 10px;
+  color: #7F5539;
+  font-size: clamp(16px, 3vw, 20px);
+}

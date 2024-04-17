@@ -1,0 +1,767 @@
+@charset "UTF-8";
+
+body {
+    width: 100%;
+    font-family: 'Noto Sans JP';
+    font-size: clamp(12px, 3vw, 14px);
+}
+
+.welcome_message {
+    margin: 12px 0 12px 5.333vw;
+}
+
+#hero_section img {
+    width: 100%;
+}
+
+#topic_section {
+    padding: 20px 5.33vw;
+}
+
+.topic_container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.new_product {
+    position: relative;
+    margin-right: 5.33vw;
+
+}
+
+.summer_citrus {
+    font-family: 'Noto Serif JP';
+    font-size: clamp(12px, 3vw, 20px);
+    /* font-weight: bold; */
+    color: #fff;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+.new_item {
+    position: absolute;
+    left: 3%;
+    top: 3%;
+}
+
+.product_promotion {
+    position: relative;
+}
+
+.product_promotion p {
+    font-family: 'Noto Serif JP';
+    font-size: clamp(12px, 3vw, 20px);
+    /* font-weight: bold; */
+    color: #fff;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+.new_product img,
+.product_promotion img {
+    width: 42.13vw;
+}
+
+.new_item img {
+    width: 10.666vw;
+}
+
+.item_list {
+    position: relative;
+}
+
+.item_list img {
+    width: 89.33vw;
+}
+
+.item_list p {
+    font-family: 'Noto Serif JP';
+    font-size: clamp(12px, 3vw, 20px);
+    /* font-weight: bold; */
+    color: #7F5539;
+    position: absolute;
+    right: 2%;
+    bottom: 7%;
+}
+
+#introduce_section {
+    background-image: url(../images/sp_introduce_background.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-size: cover;
+    height: 568px;
+}
+
+.introduce_container {
+    text-align: center;
+    color: #fff;
+}
+
+.introduce_container h2 {
+    font-size: clamp(24px, 3.5vw, 30px);
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+
+.introduce_container h3 {
+    font-size: clamp(16px, 3vw, 20px);
+    padding-bottom: 60px;
+}
+
+.philosophy_title {
+    font-size: clamp(20px, 3vw, 24px);
+    padding-bottom: 12px;
+}
+
+.philosophy_explain {
+    font-size: clamp(16px, 2.5vw, 20px);
+    padding-bottom: 300px;
+}
+
+.box {
+    opacity: 0;
+}
+
+.fadeSlide {
+    animation-name: fadeSlideAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeSlideAnime {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+#ranking_section {
+    padding: 0 5.333vw;
+}
+
+.items_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    width: 42.133vw;
+
+    &:nth-child(1) {
+        margin-right: 5.066vw;
+    }
+
+    &:nth-child(3) {
+        margin-right: 5.066vw;
+    }
+
+    &:nth-child(5) {
+        margin-right: 5.066vw;
+    }
+}
+
+
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.fadeUp_2 {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeUpTrigger {
+    opacity: 0;
+}
+
+.fadeUpTrigger2 {
+    opacity: 0;
+}
+
+/* .fadeUp:nth-child(2) {
+    animation-delay: 0.2ms;
+}
+
+.fadeUp:nth-child(4) {
+    animation-delay: 0.2ms;
+}
+
+.fadeUp:nth-child(6) {
+    animation-delay: 0.2ms;
+}
+
+.fadeUp_2:nth-child(2) {
+    animation-delay: 0.2ms;
+}
+
+.fadeUp_2:nth-child(3) {
+    animation-delay: 0.4ms;
+}
+
+.fadeUp_2:nth-child(4) {
+    animation-delay: 0.6ms;
+} */
+
+#ranking_section h2 {
+    text-align: center;
+    font-size: clamp(20px, 3vw, 26px);
+    padding-top: 32px;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+#ranking_section h2:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    display: inline-block;
+    width: 40.53vw;
+    max-width: 240px;
+    height: 4px;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translate(-50%);
+    background-color: #ffd233;
+}
+
+#ranking_section img {
+    width: 42.133vw;
+    margin-bottom: 20px;
+}
+
+
+.first_icon {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #ffd233;
+    font-size: clamp(16px, 2.5vw, 20px);
+    margin: 0 auto 20px;
+}
+
+.rank_icon {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #e8c2ca;
+    font-size: clamp(16px, 2.5vw, 20px);
+    margin: 0 auto 20px;
+}
+
+.product_name,
+.product_price {
+    font-size: clamp(16px, 2vw, 20px);
+    margin-bottom: 22px;
+}
+
+.product_name {
+    line-height: 1.6;
+    color: #7F5539;
+}
+
+.product_price {
+    width: 30vw;
+    color: #bf0000;
+}
+
+.button {
+    width: 42.133vw;
+    font-family: 'Noto Sans JP';
+    font-size: clamp(12px, 2vw, 20px);
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 80px;
+    padding: 12px 9.866vw;
+    background: #7f5539;
+    color: #ffffff;
+    transition: .3s;
+    border: 1px solid #7f5539;
+}
+
+.button:hover {
+    color: #7f5539;
+    /* 背景色     */
+    background: #ffffff;
+    /* 文字色     */
+}
+
+.price_container {
+    display: flex;
+}
+
+.fa-heart {
+    width: 12vw;
+    font-size: clamp(20px, 2vw, 24px);
+    text-align: right;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+#switch_btn {
+    margin-left: 10.93vw;
+    width: 20px;
+    height: 20px;
+    background: url(../images/favorite_icon_empty.svg) no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+#switch_btn2 {
+    margin-left: 10.93vw;
+    width: 20px;
+    height: 20px;
+    background: url(../images/favorite_icon_empty.svg) no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+#switch_btn3 {
+    margin-left: 10.93vw;
+    width: 20px;
+    height: 20px;
+    background: url(../images/favorite_icon_empty.svg) no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+#switch_btn4 {
+    margin-left: 10.93vw;
+    width: 20px;
+    height: 20px;
+    background: url(../images/favorite_icon_empty.svg) no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+#switch_btn5 {
+    margin-left: 10.93vw;
+    width: 20px;
+    height: 20px;
+    background: url(../images/favorite_icon_empty.svg) no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+#switch_btn6 {
+    margin-left: 10.93vw;
+    width: 20px;
+    height: 20px;
+    background: url(../images/favorite_icon_empty.svg) no-repeat;
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+#switch_btn2.on_switch {
+    background: url(../images/favorite_icon_fill.svg) no-repeat;
+    background-size: 100% 100%;
+    animation: anim-scale 0.5s ease-out;
+    transform-origin: 50% 50%;
+}
+
+#switch_btn3.on_switch {
+    background: url(../images/favorite_icon_fill.svg) no-repeat;
+    background-size: 100% 100%;
+    animation: anim-scale 0.5s ease-out;
+    transform-origin: 50% 50%;
+}
+
+#switch_btn4.on_switch {
+    background: url(../images/favorite_icon_fill.svg) no-repeat;
+    background-size: 100% 100%;
+    animation: anim-scale 0.5s ease-out;
+    transform-origin: 50% 50%;
+}
+
+#switch_btn5.on_switch {
+    background: url(../images/favorite_icon_fill.svg) no-repeat;
+    background-size: 100% 100%;
+    animation: anim-scale 0.5s ease-out;
+    transform-origin: 50% 50%;
+}
+
+#switch_btn6.on_switch {
+    background: url(../images/favorite_icon_fill.svg) no-repeat;
+    background-size: 100% 100%;
+    animation: anim-scale 0.5s ease-out;
+    transform-origin: 50% 50%;
+}
+
+#switch_btn.on_switch {
+    background: url(../images/favorite_icon_fill.svg) no-repeat;
+    background-size: 100% 100%;
+    animation: anim-scale 0.5s ease-out;
+    transform-origin: 50% 50%;
+}
+
+@keyframes anim-scale {
+    0% {
+        transform: scale(0.4, 0.4);
+    }
+
+    40% {
+        transform: scale(1.2, 1.2);
+    }
+
+    60% {
+        transform: scale(1, 1);
+    }
+
+    80% {
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+/*リンクの形状*/
+#page_top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #7F5539;
+    border-radius: 10%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.6rem;
+    transition: all 0.3s;
+}
+
+#page_top a img {
+    width: 70px;
+}
+
+#page_top a:hover {
+    background-color: #ede0d4;
+}
+
+/*リンクを右下に固定*/
+#page_top {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page_top.UpMove {
+    animation: UpAnime .5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#page_top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(1000px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+
+    .welcome_message {
+        font-size: 12px;
+        margin: 24px 0 12px 7.54vw;
+    }
+
+    #topic_section {
+        padding: 80px 11.932vw;
+    }
+
+    #topic_section img {
+        width: 36.603vw;
+    }
+
+    #topic_section .new_item img {
+        width: 10.675vw;
+    }
+
+    .summer_citrus {
+        font-family: 'Noto Serif JP';
+        font-size: clamp(20px, 2.5vw, 36px);
+        /* font-weight: bold; */
+        color: #fff;
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+    }
+
+    .product_promotion p {
+        font-family: 'Noto Serif JP';
+        font-size: clamp(20px, 2.5vw, 36px);
+        /* font-weight: bold; */
+        color: #fff;
+        position: absolute;
+        right: 5%;
+        bottom: 5%;
+    }
+
+    .item_list p {
+        font-family: 'Noto Serif JP';
+        font-size: clamp(20px, 2.5vw, 36px);
+        /* font-weight: bold; */
+        color: #7F5539;
+        position: absolute;
+        right: 2%;
+        bottom: 7%;
+    }
+
+    #topic_section .item_list img {
+        width: 76.134vw;
+    }
+
+    .new_product {
+        margin-right: 2.928vw;
+    }
+
+    #introduce_section {
+        background-image: url(../images/introduce_background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 667px;
+    }
+
+    .introduce_container h2 {
+        font-size: clamp(30px, 2.5vw, 36px);
+        padding-top: 200px;
+        padding-bottom: 20px;
+    }
+
+    .introduce_container h3 {
+        font-size: 20px;
+        padding-bottom: 40px;
+    }
+
+    .philosophy_title {
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+
+    .philosophy_explain {
+        font-size: 24px;
+        padding-bottom: 283px;
+    }
+
+    #ranking_section h2 {
+        text-align: center;
+        font-size: clamp(26px, 2vw, 32px);
+        padding-top: 80px;
+        margin-bottom: 92px;
+        position: relative;
+    }
+
+    #ranking_section h2:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -16px;
+        display: inline-block;
+        width: 240px;
+        height: 8px;
+        -moz-transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translate(-50%);
+        background-color: #ffd233;
+    }
+
+    #ranking_section img {
+        width: 23.426vw;
+        margin-bottom: 20px;
+    }
+
+    .first_icon {
+        height: 4.392vw;
+        width: 4.392vw;
+        line-height: 4.392vw;
+        text-align: center;
+        background: #ffd233;
+        font-size: clamp(20px, 2vw, 24px);
+        margin: 0 auto 20px;
+    }
+
+    .rank_icon {
+        height: 4.392vw;
+        width: 4.392vw;
+        line-height: 4.392vw;
+        text-align: center;
+        background: #e8c2ca;
+        font-size: clamp(20px, 2vw, 24px);
+        margin: 0 auto 20px;
+    }
+
+    .items_container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item {
+        width: 23.426vw;
+
+        &:nth-child(1) {
+            margin-right: 4.392vw;
+        }
+
+        &:nth-child(2) {
+            margin-right: 4.392vw;
+        }
+
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+
+        &:nth-child(4) {
+            margin-right: 4.392vw;
+        }
+
+        &:nth-child(5) {
+            margin-right: 4.392vw;
+        }
+    }
+
+    .product_name,
+    .product_price {
+        font-size: clamp(16px, 2vw, 24px);
+        margin-bottom: 22px;
+    }
+
+    .button {
+        width: 19.033vw;
+        padding: 16px 4.392vw;
+        font-size: clamp(12px, 1.5vw, 20px);
+    }
+
+    .button_area {
+        text-align: center;
+    }
+
+    .product_price {
+        width: 10.468vw;
+    }
+
+    #switch_btn {
+        margin-left: 11.2vw;
+        text-align: right;
+        width: 24px;
+        height: 24px;
+    }
+
+    #switch_btn2 {
+        margin-left: 11.2vw;
+        text-align: right;
+        width: 24px;
+        height: 24px;
+    }
+
+    #switch_btn3 {
+        margin-left: 11.2vw;
+        text-align: right;
+        width: 24px;
+        height: 24px;
+    }
+
+    #switch_btn4 {
+        margin-left: 11.2vw;
+        text-align: right;
+        width: 24px;
+        height: 24px;
+    }
+
+    #switch_btn5 {
+        margin-left: 11.2vw;
+        text-align: right;
+        width: 24px;
+        height: 24px;
+    }
+
+    #switch_btn6 {
+        margin-left: 11.2vw;
+        text-align: right;
+        width: 24px;
+        height: 24px;
+    }
+
+    #page_top a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        background-color: #ffffff;
+        border-radius: 10%;
+        text-align: center;
+        text-decoration: none;
+        font-size: 0.6rem;
+        transition: all 0.3s;
+    }
+
+    #page_top a img {
+        width: 80px;
+    }
+}
